@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Background Color</h2>
+    <p id="color">Red</p>
+    <button id="btn" onclick="GetChangColor()"> Clcik me </button>
+
+
+
+    <script>
+
+
+const colors = ['red','black','blue','purple','cyan','gray']
+const btn = document.getElementById('btn')
+const color = document.getElementById('color')
+
+function GetChangColor ()
+{
+    let ramdonColor = getRamdon()
+
+    document.body.style.backgroundColor = colors[ramdonColor]
+    color.textContent = colors[ramdonColor]
+}
+
+function getRamdon()
+{
+    return Math.floor(Math.random()* colors.length)  // 0
+} 
+</script>
+
+
+</body>
+</html>
